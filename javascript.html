@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<title>teste java02</title>
+<meta charset="utf-8"/>
+<script>
+var quebrada=false;
+function Lampada (tipo) {
+	
+	if (tipo==1) {
+	arquivo = "_imagens/lampada-acesa.jpg";	
+	}
+	if (tipo==2) {
+		arquivo = "_imagens/lampada-apagada.jpg";
+	}
+	if (tipo==3) {
+		arquivo = "_imagens/lampada-quebrada.jpg";
+		
+	}
+	if (!quebrada) {
+	document.getElementById('lampada').src=arquivo;
+		if (tipo==3) {
+			quebrada=true;
+		};
+	}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Ascenda a lâmpada</h1>
+<img src="_imagens/lampada-apagada.jpg" id="lampada" onmousemove="Lampada(1)" onmouseout="Lampada(2)" onclick="Lampada(3)"/>
+
+</body>
+
+
+</html>
